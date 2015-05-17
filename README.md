@@ -19,4 +19,4 @@ markdown 本来的目的是即可以方便直接阅读，也方便转换为其�
 * markdown-it 跟 marked 两个 markdown 解释器对转义字符的处理不一样，真是急死强迫症。
 * 用 javascript 解析 markdown 看起来跟用直接的 html 不太一样，前者在最上面多一行空行，也是急死强迫症了。
 
-算了不想管了，BOSS能看懂就够了。
+算了不想管了，BOSS 能看懂就够了。
