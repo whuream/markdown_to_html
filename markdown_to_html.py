@@ -10,8 +10,9 @@ __author__ = 'Tong'
 
 
 import sys
+import os
 
-def markdown_to_html(file_name, out_name='result.html'):
+def markdown_to_html(file_name, out_name):
     markdown_js = ''
     with open('markdown-it.js') as f:
         markdown_js = f.read().decode('utf-8')
@@ -49,8 +50,10 @@ def markdown_to_html(file_name, out_name='result.html'):
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print 'usage: python2 markdown_to_html file_name'
+        print 'usage: python2 markdown_to_html.py file_name'
+        sys.exit(0)
 
     file_name = sys.argv[1]
+    out_name = os.path.splitext(os.path.basename(file_name))[0] + '.html'
 
-    markdown_to_html(file_name)
+    markdown_to_html(file_name, out_name)
