@@ -14,11 +14,11 @@ import os
 
 def markdown_to_html(file_name, out_name):
     markdown_js = ''
-    with open('markdown-it.js') as f:
+    with open(os.path.join(os.path.dirname(sys.argv[0]), 'markdown-it.js')) as f:
         markdown_js = f.read().decode('utf-8')
 
     markdown_css = ''
-    with open('github-markdown.css') as f:
+    with open(os.path.join(os.path.dirname(sys.argv[0]), 'github-markdown.css')) as f:
         markdown_css = f.read().decode('utf-8')
 
     markdown_content = ''
